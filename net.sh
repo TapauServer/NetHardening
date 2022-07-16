@@ -33,21 +33,23 @@ mainmenu(){
 		sysctl -w net.ipv4.conf.all.accept_source_route=0 &> /dev//null
 		sysctl -w net.ipv6.conf.all.accept_source_route=0 &> /dev//null
 		sysctl -w net.ipv4.conf.all.log_martians=1 &> /dev//null
-		echo -e "hardening successfully configured"
+		echo -e $Blue"[#]Hardening successfully configured"
+		echo -e "" $White
 	elif [ $sel == "2" ];then
-		sysctl -w net.ipv4.conf.default.rp_filter=1 &> /dev//null
-		sysctl -w net.ipv4.conf.all.rp_filter=1 &> /dev//null
-		sysctl -w net.ipv4.tcp_syncookies=1 &> /dev//null 
-		sysctl -w net.ipv4.ip_forward=0 &> /dev//null 
-		sysctl -w net.ipv6.conf.all.forwarding=1 &> /dev//null 
-		sysctl -w net.ipv4.conf.all.accept_redirects=0 &> /dev//null
-		sysctl -w net.ipv6.conf.all.accept_redirects=0 &> /dev//null
-		sysctl -w net.ipv4.conf.all.secure_redirects=1 &> /dev//null
-		sysctl -w net.ipv4.conf.all.send_redirects=0 &> /dev//null
-		sysctl -w net.ipv4.conf.all.accept_source_route=0 &> /dev//null
-		sysctl -w net.ipv6.conf.all.accept_source_route=0 &> /dev//null
-		sysctl -w net.ipv4.conf.all.log_martians=1 &> /dev//null
-		echo -e "hardening was successfully changed to default"
+		sysctl -w net.ipv4.conf.default.rp_filter=0 &> /dev//null
+		sysctl -w net.ipv4.conf.all.rp_filter=0 &> /dev//null
+		sysctl -w net.ipv4.tcp_syncookies=0 &> /dev//null 
+		sysctl -w net.ipv4.ip_forward=1 &> /dev//null 
+		sysctl -w net.ipv6.conf.all.forwarding=0 &> /dev//null 
+		sysctl -w net.ipv4.conf.all.accept_redirects=1 &> /dev//null
+		sysctl -w net.ipv6.conf.all.accept_redirects=1 &> /dev//null
+		sysctl -w net.ipv4.conf.all.secure_redirects=0 &> /dev//null
+		sysctl -w net.ipv4.conf.all.send_redirects=1 &> /dev//null
+		sysctl -w net.ipv4.conf.all.accept_source_route=1 &> /dev//null
+		sysctl -w net.ipv6.conf.all.accept_source_route=1 &> /dev//null
+		sysctl -w net.ipv4.conf.all.log_martians=0 &> /dev//null
+		echo -e $Red"[!] Your Wetwork is in Danger"
+		echo -e "" $White
 
 	fi
 }
