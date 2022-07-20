@@ -48,7 +48,7 @@ mainmenu(){
 		sysctl -w net.ipv4.conf.all.accept_source_route=1 &> /dev//null
 		sysctl -w net.ipv6.conf.all.accept_source_route=1 &> /dev//null
 		sysctl -w net.ipv4.conf.all.log_martians=0 &> /dev//null
-		echo -e $Red"[!] Your Wetwork is in Danger"
+		echo -e $Red"[!] Your Network is in Danger"
 		echo -e "" $White
 
 	fi
