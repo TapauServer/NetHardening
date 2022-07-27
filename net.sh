@@ -11,7 +11,7 @@ menu(){
 	echo -e -n $Blue;figlet "NetHardening"
 	echo ""
 	echo -e $White
-	echo -e "By TamingSari (BETA VERSION)"
+	echo -e "By TapauServer (BETA VERSION)"
 	echo ""
 	echo -e "1. Enable"
 	echo -e "2. Disable"
